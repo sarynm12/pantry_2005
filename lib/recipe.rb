@@ -3,7 +3,7 @@ class Recipe
 
   def initialize(name)
     @name = name
-    @ingredient_required = {}
-  end 
+    @ingredients_required = {}
+  end
 
 end
