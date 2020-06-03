@@ -31,30 +31,3 @@ class PantryTest < Minitest::Test
   end
 
 end
-
-
-# ## Iteration 1 - Ingredient and Pantry
-#
-# ```markdown
-# There are **4** Possible Points in Iteration 1:
-# 1. Ingredient Creation - including all attr_readers
-# 2. Pantry Creation - including all attr_readers
-# 3. Pantry #stock_check
-# 4. Pantry #restock
-
-#
-# pry(main)> pantry.stock_check(ingredient1)
-# # => 0
-#
-# pry(main)> pantry.restock(ingredient1, 5)
-#
-# pry(main)> pantry.restock(ingredient1, 10)
-#
-# pry(main)> pantry.stock_check(ingredient1)
-# # => 15
-#
-# pry(main)> pantry.restock(ingredient2, 7)
-#
-# pry(main)> pantry.stock_check(ingredient2)
-# # => 7
-# ```
