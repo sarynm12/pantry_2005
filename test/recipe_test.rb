@@ -29,6 +29,7 @@ class RecipeTest < Minitest::Test
     recipe1.add_ingredient(ingredient1, 2)
     recipe1.add_ingredient(ingredient1, 4)
     recipe1.add_ingredient(ingredient2, 8)
+    binding.pry
     assert recipe1.ingredients_required
   end
 
@@ -49,19 +50,6 @@ end
 # For the `add_ingredient` method, the first argument is an Ingredient, and the second argument is the amount of the ingredient required for the Recipe.
 #
 # The `total_calories` method should sum the calories of each ingredient. The calories for each ingredient can be calculated by multiplying the `calories` attribute of the Ingredient by the amount of the ingredient required for the recipe.
-
-#
-# pry(main)> recipe1.add_ingredient(ingredient1, 2)
-#
-# pry(main)> recipe1.add_ingredient(ingredient1, 4)
-#
-# pry(main)> recipe1.add_ingredient(ingredient2, 8)
-#
-# pry(main)> recipe1.ingredients_required
-# # => {#<Ingredient:0x00007fd7811553c8...> => 6, #<Ingredient:0x00007fd78110b0e8...> => 8}
-#
-# pry(main)> recipe1.ingredients
-# # => [#<Ingredient:0x007fe8438c7a70...>, #<Ingredient:0x007fe843857f40...>]
 #
 # pry(main)> recipe2 = Recipe.new("Cheese Burger")
 #
