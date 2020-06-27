@@ -10,21 +10,18 @@ class CookBook
   end
 
   def ingredients
-    ingredients = []
+    results = []
     recipes.each do |recipe|
       recipe.ingredients.each do |ingredient|
-        ingredients << ingredient.name
+      results << ingredient.name
       end
     end
-    ingredients.uniq
+    results.uniq
   end
 
   def highest_calorie_meal
-    @recipes.max_by |recipe|
+    @recipes.max_by do |recipe|
       recipe.total_calories
     end
   end
-
-  #above, instead of iterating over the hash ingredients_required, you can also use recipe.ingredients |ingredient|
-    #ingredient_names << ingredient.name
-  #end
+end 
